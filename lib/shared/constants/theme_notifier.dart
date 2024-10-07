@@ -1,5 +1,3 @@
-// lib/providers/theme_provider.dart
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ThemeNotifierProvider extends StateNotifier<bool> {

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:clot/app/routes.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
 import 'package:clot/shared/constants/screen_size_config.dart';
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 5), () {
-      Navigator.pushNamed(context, "/onboardingScreen");
+      Navigator.pushReplacementNamed(context, AppRoutes.home);
     });
   }
 
