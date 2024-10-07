@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.home);
+      Navigator.pushReplacementNamed(context, AppRoutes.signIn);
     });
   }
 
@@ -25,16 +25,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     ScreenSizeConfig.init(context);
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          height: ScreenSizeConfig.height,
-          width: ScreenSizeConfig.width,
-          color: AppColors.primaryColor,
-          child: Image.asset(
-            AppImages.appLogo,
-            height: ScreenSizeConfig.height * 0.45,
-            width: ScreenSizeConfig.width * 0.45,
-          ),
+      body: Container(
+        height: ScreenSizeConfig.height,
+        width: ScreenSizeConfig.width,
+        color: AppColors.primaryColor,
+        child: Image.asset(
+          AppImages.appLogo,
+          height: ScreenSizeConfig.height * 0.45,
+          width: ScreenSizeConfig.width * 0.45,
         ),
       ),
     );

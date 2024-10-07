@@ -8,9 +8,13 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () => onTap,
       child: Container(
+        alignment: Alignment.center,
+        width: size.width,
+        height: size.height * 0.06,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -18,7 +22,9 @@ class AppButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                color: AppColors.whiteColor,
+              ),
         ),
       ),
     );

@@ -8,5 +8,5 @@ class AppImages {
   static const String parcelIcon = "assets/icons/parcel.svg";
 
   //SOCIAL ICON
-  static const String googleIcon = "assets/icons/google.svg";
+  static const String googleIcon = "assets/icons/google.png";
 }

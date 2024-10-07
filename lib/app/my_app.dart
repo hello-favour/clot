@@ -9,6 +9,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // final isLightTheme = ref.watch(ThemeNotifierProvider().themeProvider);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Clot App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

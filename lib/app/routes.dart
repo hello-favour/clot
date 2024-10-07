@@ -1,10 +1,12 @@
+import 'package:clot/feature/authentication/screens/sign_in_screen.dart';
+import 'package:clot/feature/authentication/screens/sign_up_screen.dart';
 import 'package:clot/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
   static const String splash = '/';
-  static const String home = '/home';
-  static const String product = '/product';
+  static const String signIn = '/SignIn';
+  static const String signUp = '/signUp';
   static const String cart = '/cart';
   static const String profile = '/profile';
 
@@ -12,6 +14,10 @@ class AppRoutes {
     switch (settings.name) {
       case splash:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
+      case signIn:
+        return MaterialPageRoute(builder: (_) => const SignInScreen());
+      case signUp:
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
