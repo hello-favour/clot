@@ -58,7 +58,7 @@ class SignUpScreen extends ConsumerWidget {
             AppButton(
               title: "Continue",
               onTap: () {
-                ;
+                Navigator.pushReplacementNamed(context, AppRoutes.aboutUser);
               },
             ),
             const Gap(25),

@@ -39,7 +39,7 @@ class ForgotPasswordScereen extends ConsumerWidget {
             AppButton(
               title: "Continue",
               onTap: () {
-                Navigator.pushReplacementNamed(context, AppRoutes.sentEmail);
+                Navigator.pushReplacementNamed(context, AppRoutes.aboutUser);
               },
             ),
           ],
