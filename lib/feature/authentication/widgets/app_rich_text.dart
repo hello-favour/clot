@@ -19,12 +19,12 @@ class AppRichText extends StatelessWidget {
         children: [
           TextSpan(
             text: text1,
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           TextSpan(
             text: text2,
             recognizer: TapGestureRecognizer()..onTap = onTap,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),

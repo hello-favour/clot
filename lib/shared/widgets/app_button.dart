@@ -10,7 +10,7 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: () => onTap,
+      onTap: onTap,
       child: Container(
         alignment: Alignment.center,
         width: size.width,
@@ -22,7 +22,7 @@ class AppButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: AppColors.whiteColor,
               ),
         ),

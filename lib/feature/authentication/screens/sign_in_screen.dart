@@ -1,3 +1,4 @@
+import 'package:clot/app/routes.dart';
 import 'package:clot/feature/authentication/widgets/app_rich_text.dart';
 import 'package:clot/feature/authentication/widgets/social_button.dart';
 import 'package:clot/shared/constants/app_colors.dart';
@@ -39,7 +40,9 @@ class SignInScreen extends ConsumerWidget {
             const Gap(20),
             AppButton(
               title: "Continue",
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, AppRoutes.signUp);
+              },
             ),
             const Gap(20),
             AppRichText(

@@ -1,50 +1,86 @@
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
-class BasicAppbar extends StatelessWidget implements PreferredSizeWidget {
+class MyCustomAppBar extends StatelessWidget {
+  const MyCustomAppBar({
+    super.key,
+    this.title,
+    this.showBackArrow = false,
+    this.leadingIcon,
+    this.actions,
+    this.leadingOnPressed,
+  });
+
   final Widget? title;
-  final Widget? action;
-  final Color? backgroundColor;
-  final bool hideBack;
-  const BasicAppbar(
-      {this.title,
-      this.hideBack = false,
-      this.action,
-      this.backgroundColor,
-      super.key});
+  final bool showBackArrow;
+  final IconData? leadingIcon;
+  final List<Widget>? actions;
+  final VoidCallback? leadingOnPressed;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: backgroundColor ?? Colors.transparent,
-      elevation: 0,
-      centerTitle: true,
-      automaticallyImplyLeading: false,
-      title: title ?? const Text(''),
-      actions: [action ?? Container()],
-      leading: hideBack
-          ? null
-          : IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Container(
-                height: 50,
-                width: 50,
-                decoration: const BoxDecoration(
-                  color: AppColors.greyColor,
-                  shape: BoxShape.circle,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        // Leading icon or back button
+        showBackArrow
+            ? IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: const Icon(
+                  Iconsax.arrow_left,
+                  color: AppColors.blackColor,
                 ),
-                child: const Icon(
-                  Icons.arrow_back_ios_new,
-                  size: 15,
-                  color: Colors.white,
-                ),
-              ),
-            ),
+              )
+            : leadingIcon != null
+                ? GestureDetector(
+                    onTap: leadingOnPressed,
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: AppColors.greyColor,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(99)),
+                        border: Border.all(color: AppColors.greyColor),
+                      ),
+                      child: Icon(
+                        leadingIcon,
+                        size: 18,
+                        color: AppColors.blackColor,
+                      ),
+                    ),
+                  )
+                : const SizedBox.shrink(), // Empty box if no leading icon
+
+        // Title
+        Expanded(
+          child: Center(
+            child: title ?? const SizedBox.shrink(), // Center title
+          ),
+        ),
+
+        // Actions
+        Row(
+          children: actions?.map((action) {
+                return Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: AppColors.greyColor,
+                    borderRadius: const BorderRadius.all(Radius.circular(99)),
+                    border: Border.all(color: AppColors.greyColor),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      // Handle action tap if specific onTap function is not provided
+                      print('Action tapped!');
+                    },
+                    child: action,
+                  ),
+                );
+              }).toList() ??
+              [],
+        ),
+      ],
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
