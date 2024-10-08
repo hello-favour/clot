@@ -7,7 +7,9 @@ import 'package:clot/feature/home/screens/home_screen.dart';
 import 'package:clot/feature/home/screens/sell_all_screen.dart';
 import 'package:clot/feature/home/screens/product_categories_screen.dart';
 import 'package:clot/feature/notification/screens/notification_screen.dart';
+import 'package:clot/feature/orders/screens/order_details_screen.dart';
 import 'package:clot/feature/orders/screens/order_screen.dart';
+import 'package:clot/feature/profile/screens/profile_screen.dart';
 import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:clot/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +27,8 @@ class AppRoutes {
   static const String productCategory = '/productCategory';
   static const String notification = '/notification';
   static const String order = '/order';
+  static const String orderDetails = '/orderDetails';
+  static const String profileScreen = '/profileScreen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -53,6 +57,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const NotificationScreen());
       case order:
         return MaterialPageRoute(builder: (_) => const OrderScreen());
+      case orderDetails:
+        return MaterialPageRoute(builder: (_) => const OrderDetailsScreen());
+      case profileScreen:
+        return MaterialPageRoute(builder: (_) => const ProfileScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

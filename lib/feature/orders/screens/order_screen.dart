@@ -10,7 +10,7 @@ class OrderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    List products = [];
+    // List products = [];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
@@ -47,27 +47,29 @@ class OrderScreen extends ConsumerWidget {
               child: Row(
                 children: List.generate(
                   5,
-                  (index) => Container(
-                    padding: const EdgeInsets.all(5),
-                    width: size.width * 0.20,
-                    decoration: BoxDecoration(
-                      color: AppColors.primaryColor,
-                      borderRadius: BorderRadius.circular(99),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Shipping",
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: AppColors.whiteColor,
-                          ),
+                  (index) => Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Container(
+                      padding: const EdgeInsets.all(5),
+                      width: size.width * 0.20,
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryColor,
+                        borderRadius: BorderRadius.circular(99),
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Shipping",
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.whiteColor,
+                            ),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-            const Gap(10),
+            const Gap(20),
             const OrderCard(),
-            const Spacer(),
           ],
         ),
       ),
