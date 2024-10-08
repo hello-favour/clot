@@ -4,6 +4,10 @@ import 'package:clot/feature/authentication/screens/sent_email_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_in_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_up_screen.dart';
 import 'package:clot/feature/home/screens/home_screen.dart';
+import 'package:clot/feature/home/screens/sell_all_screen.dart';
+import 'package:clot/feature/home/screens/product_categories_screen.dart';
+import 'package:clot/feature/notification/screens/notification_screen.dart';
+import 'package:clot/feature/orders/screens/order_screen.dart';
 import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:clot/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +21,10 @@ class AppRoutes {
   static const String aboutUser = '/aboutUser';
   static const String appBottomNav = '/appBottomNav';
   static const String home = '/home';
+  static const String seeAll = '/seeAll';
+  static const String productCategory = '/productCategory';
+  static const String notification = '/notification';
+  static const String order = '/order';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -36,6 +44,15 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AppBottomNav());
       case home:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case seeAll:
+        return MaterialPageRoute(builder: (_) => const SeeAllScreen());
+      case productCategory:
+        return MaterialPageRoute(
+            builder: (_) => const ProductCategoriesScreen());
+      case notification:
+        return MaterialPageRoute(builder: (_) => const NotificationScreen());
+      case order:
+        return MaterialPageRoute(builder: (_) => const OrderScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

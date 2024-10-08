@@ -1,4 +1,6 @@
 import 'package:clot/feature/home/screens/home_screen.dart';
+import 'package:clot/feature/notification/screens/notification_screen.dart';
+import 'package:clot/feature/orders/screens/order_screen.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -15,8 +17,8 @@ class _AppBottomNavState extends State<AppBottomNav> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-    Container(),
-    Container(),
+    const NotificationScreen(),
+    const OrderScreen(),
     Container(),
   ];
 

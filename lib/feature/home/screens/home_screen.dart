@@ -1,4 +1,5 @@
 import 'package:clot/app/app_bar.dart';
+import 'package:clot/app/routes.dart';
 import 'package:clot/feature/home/widgets/product_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
@@ -87,7 +88,9 @@ class HomeScreen extends ConsumerWidget {
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, AppRoutes.seeAll);
+                        },
                         child: Text(
                           "See All",
                           style: Theme.of(context).textTheme.bodyMedium,
@@ -106,7 +109,9 @@ class HomeScreen extends ConsumerWidget {
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, AppRoutes.seeAll);
+                        },
                         child: Text(
                           "See All",
                           style: Theme.of(context).textTheme.bodyMedium,
@@ -126,11 +131,14 @@ class HomeScreen extends ConsumerWidget {
                           padding: const EdgeInsets.only(right: 10),
                           child: ProductCard(
                             onPressed: () {},
-                            imageUrl: AppImages.slipper,
+                            imageUrl: AppImages.image3,
                             productName: "Max Cirro Men's Slides",
                             price: 55.00,
                             discountPrice: 100.97,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, AppRoutes.productCategory);
+                            },
                           ),
                         );
                       },
@@ -148,7 +156,9 @@ class HomeScreen extends ConsumerWidget {
                                 ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, AppRoutes.seeAll);
+                        },
                         child: Text(
                           "See All",
                           style: Theme.of(context).textTheme.bodyMedium,
@@ -167,11 +177,14 @@ class HomeScreen extends ConsumerWidget {
                           padding: const EdgeInsets.only(right: 10),
                           child: ProductCard(
                             onPressed: () {},
-                            imageUrl: AppImages.hoodie,
+                            imageUrl: AppImages.slipper,
                             productName: 'Men\'s Harrington Jacket',
                             price: 148.00,
                             discountPrice: null,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, AppRoutes.productCategory);
+                            },
                           ),
                         );
                       },

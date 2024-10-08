@@ -20,10 +20,10 @@ class CategoriesCard extends StatelessWidget {
             child: Column(
               children: [
                 const CircleAvatar(
-                  radius: 40,
+                  radius: 45,
                   backgroundColor: AppColors.greyColor,
                   backgroundImage: AssetImage(
-                    AppImages.hoodie,
+                    AppImages.image4,
                   ),
                 ),
                 Text(

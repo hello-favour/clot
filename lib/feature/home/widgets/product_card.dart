@@ -22,7 +22,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         width: 150,
         decoration: BoxDecoration(
@@ -47,7 +47,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   Positioned(
                     top: 8,
-                    right: 10,
+                    right: 0,
                     child: IconButton(
                       icon: const Icon(Icons.favorite_border),
                       color: Colors.grey,
