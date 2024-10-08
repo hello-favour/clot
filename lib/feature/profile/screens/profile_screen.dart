@@ -1,7 +1,9 @@
+import 'package:clot/feature/profile/widgets/profile_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gap/gap.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -23,23 +25,79 @@ class ProfileScreen extends ConsumerWidget {
                 AppImages.image4,
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  padding: const EdgeInsets.only(right: 10, left: 10),
-                  color: AppColors.greyColor,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis.",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
+            Gap(size.height * 0.03),
+            ProfileCard(
+              height: size.height * 0.09,
+              check: false,
+              title: "Gilbert Jones",
+              subTitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Gilbertjones001@gmail.com",
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: AppColors.greyText.withOpacity(0.5),
+                            ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Text(
+                          "Edit",
+                          style:
+                              Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                    color: AppColors.primaryColor,
+                                  ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
+                  Text(
+                    "121-224-7890",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: AppColors.greyText.withOpacity(0.5),
+                        ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
+            ),
+            ProfileCard(
+              onTap: () {},
+              title: "Address",
+            ),
+            const Gap(5),
+            ProfileCard(
+              onTap: () {},
+              title: "Wishlist",
+            ),
+            const Gap(5),
+            ProfileCard(
+              onTap: () {},
+              title: "Payment",
+            ),
+            const Gap(5),
+            ProfileCard(
+              onTap: () {},
+              title: "Help",
+            ),
+            const Gap(5),
+            ProfileCard(
+              onTap: () {},
+              title: "Support",
+            ),
+            const Gap(20),
+            GestureDetector(
+              onTap: () {},
+              child: Text(
+                "Sign Out",
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: AppColors.redColor,
+                    ),
               ),
             ),
           ],
