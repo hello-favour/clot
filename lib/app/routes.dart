@@ -3,6 +3,8 @@ import 'package:clot/feature/authentication/screens/forgot_password_screen.dart'
 import 'package:clot/feature/authentication/screens/sent_email_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_in_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_up_screen.dart';
+import 'package:clot/feature/home/screens/home_screen.dart';
+import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:clot/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +15,8 @@ class AppRoutes {
   static const String forgotPassword = '/forgotPassword';
   static const String sentEmail = '/sentEmail';
   static const String aboutUser = '/aboutUser';
+  static const String appBottomNav = '/appBottomNav';
+  static const String home = '/home';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -28,6 +32,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SentEmailScreen());
       case aboutUser:
         return MaterialPageRoute(builder: (_) => const AboutUserScreen());
+      case appBottomNav:
+        return MaterialPageRoute(builder: (_) => const AppBottomNav());
+      case home:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

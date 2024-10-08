@@ -14,7 +14,7 @@ class MyCustomAppBar extends StatelessWidget {
 
   final Widget? title;
   final bool showBackArrow;
-  final IconData? leadingIcon;
+  final Widget? leadingIcon;
   final List<Widget>? actions;
   final VoidCallback? leadingOnPressed;
 
@@ -36,26 +36,26 @@ class MyCustomAppBar extends StatelessWidget {
                 ? GestureDetector(
                     onTap: leadingOnPressed,
                     child: Container(
-                      padding: const EdgeInsets.all(10),
+                      height: 40,
+                      width: 40,
                       decoration: BoxDecoration(
                         color: AppColors.greyColor,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(99)),
                         border: Border.all(color: AppColors.greyColor),
                       ),
-                      child: Icon(
-                        leadingIcon,
-                        size: 18,
-                        color: AppColors.blackColor,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(99),
+                        child: leadingIcon,
                       ),
                     ),
                   )
-                : const SizedBox.shrink(), // Empty box if no leading icon
+                : const SizedBox.shrink(),
 
         // Title
         Expanded(
           child: Center(
-            child: title ?? const SizedBox.shrink(), // Center title
+            child: title ?? const SizedBox.shrink(),
           ),
         ),
 
@@ -63,19 +63,13 @@ class MyCustomAppBar extends StatelessWidget {
         Row(
           children: actions?.map((action) {
                 return Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                    color: AppColors.greyColor,
+                    color: AppColors.primaryColor,
                     borderRadius: const BorderRadius.all(Radius.circular(99)),
                     border: Border.all(color: AppColors.greyColor),
                   ),
-                  child: GestureDetector(
-                    onTap: () {
-                      // Handle action tap if specific onTap function is not provided
-                      print('Action tapped!');
-                    },
-                    child: action,
-                  ),
+                  child: action,
                 );
               }).toList() ??
               [],

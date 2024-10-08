@@ -1,5 +1,5 @@
 import 'package:clot/app/routes.dart';
-import 'package:clot/feature/authentication/screens/about_user_screen.dart';
+import 'package:clot/feature/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -30,7 +30,7 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const AboutUserScreen(),
+      home: const HomeScreen(),
       initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRoutes.generateRoute,
     );

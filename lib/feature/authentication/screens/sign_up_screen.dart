@@ -23,7 +23,7 @@ class SignUpScreen extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const MyCustomAppBar(
-              leadingIcon: Iconsax.arrow_left,
+              leadingIcon: Icon(Iconsax.arrow_left),
             ),
             const Gap(20),
             Text(

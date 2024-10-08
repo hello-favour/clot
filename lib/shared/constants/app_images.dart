@@ -10,4 +10,12 @@ class AppImages {
 
   //SOCIAL ICON
   static const String googleIcon = "assets/icons/google.png";
+
+  //IMAGES
+  static const String image1 = "assets/images/image-1.png";
+  static const String hoodie = "assets/images/hoodie.png";
+  static const String slipper = "assets/images/slipper.png";
+  static const String image3 = "assets/images/image-3.png";
+  static const String image4 = "assets/images/image-4.png";
+  static const String image2 = "assets/images/image-2.png";
 }
