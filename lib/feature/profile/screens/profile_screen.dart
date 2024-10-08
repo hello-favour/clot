@@ -1,3 +1,4 @@
+import 'package:clot/app/routes.dart';
 import 'package:clot/feature/profile/widgets/profile_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
@@ -44,7 +45,10 @@ class ProfileScreen extends ConsumerWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, AppRoutes.addAddressScreen);
+                        },
                         child: Text(
                           "Edit",
                           style:
@@ -67,7 +71,9 @@ class ProfileScreen extends ConsumerWidget {
               ),
             ),
             ProfileCard(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.addressScreen);
+              },
               title: "Address",
             ),
             const Gap(5),

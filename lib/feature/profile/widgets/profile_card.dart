@@ -1,18 +1,20 @@
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ProfileCard extends StatelessWidget {
   final VoidCallback? onTap;
   final String title;
   final double? height;
-  final Widget? subTitle;
+  final Widget? subTitle, text;
   final bool check;
 
   const ProfileCard({
     super.key,
     this.onTap,
     required this.title,
+    this.text,
     this.height,
     this.subTitle,
     this.check = true,
@@ -43,7 +45,7 @@ class ProfileCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               subtitle: subTitle,
-              trailing: check ? const Icon(Iconsax.arrow_right_24) : null,
+              trailing: check ? const Icon(Iconsax.arrow_right_24) : text,
             ),
           ),
         ),

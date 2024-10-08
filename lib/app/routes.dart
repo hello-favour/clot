@@ -9,6 +9,8 @@ import 'package:clot/feature/home/screens/product_categories_screen.dart';
 import 'package:clot/feature/notification/screens/notification_screen.dart';
 import 'package:clot/feature/orders/screens/order_details_screen.dart';
 import 'package:clot/feature/orders/screens/order_screen.dart';
+import 'package:clot/feature/profile/screens/add_address_screen.dart';
+import 'package:clot/feature/profile/screens/address_screen.dart';
 import 'package:clot/feature/profile/screens/profile_screen.dart';
 import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:clot/splash/splash_screen.dart';
@@ -29,6 +31,8 @@ class AppRoutes {
   static const String order = '/order';
   static const String orderDetails = '/orderDetails';
   static const String profileScreen = '/profileScreen';
+  static const String addressScreen = '/addressScreen';
+  static const String addAddressScreen = '/addAddressScreen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -61,6 +65,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const OrderDetailsScreen());
       case profileScreen:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      case addressScreen:
+        return MaterialPageRoute(builder: (_) => const AddressScreen());
+      case addAddressScreen:
+        return MaterialPageRoute(builder: (_) => const AddAddressScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
