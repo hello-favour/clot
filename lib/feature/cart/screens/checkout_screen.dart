@@ -1,16 +1,17 @@
 import 'package:clot/app/app_bar.dart';
 import 'package:clot/app/routes.dart';
-import 'package:clot/feature/cart/widgets/cart_body_card.dart';
 import 'package:clot/feature/cart/widgets/cart_row.dart';
+import 'package:clot/feature/cart/widgets/checkout_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
+import 'package:clot/shared/constants/app_images.dart';
 import 'package:clot/shared/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
 
-class CartScreen extends ConsumerWidget {
-  const CartScreen({super.key});
+class CheckOutScreen extends ConsumerWidget {
+  const CheckOutScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -30,29 +31,29 @@ class CartScreen extends ConsumerWidget {
                 child: const Icon(Iconsax.arrow_left),
               ),
               title: Text(
-                "Cart",
+                "Checkout",
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
             const Gap(20),
-            GestureDetector(
+            CheckOutCard(
               onTap: () {},
-              child: Text(
-                "Remove All",
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
+              title: "Shipping Address",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
             ),
-            const Gap(20),
-            SingleChildScrollView(
-              child: Column(
+            const Gap(10),
+            CheckOutCard(
+              onTap: () {},
+              title: "Payment Method",
+              row: Row(
                 children: [
-                  ...List.generate(
-                    3,
-                    (index) => const Padding(
-                      padding: EdgeInsets.only(bottom: 10),
-                      child: CartBodyCard(),
-                    ),
+                  Text(
+                    "**** 4187",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    overflow: TextOverflow.ellipsis,
                   ),
+                  const Gap(10),
+                  Image.asset(AppImages.masterCard),
                 ],
               ),
             ),
@@ -78,10 +79,26 @@ class CartScreen extends ConsumerWidget {
             ),
             Gap(size.height * 0.08),
             AppButton(
+              row: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "\$208",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: AppColors.whiteColor,
+                        ),
+                  ),
+                  Text(
+                    "Place Order",
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppColors.whiteColor,
+                        ),
+                  ),
+                ],
+              ),
               onTap: () {
-                Navigator.pushNamed(context, AppRoutes.checkOutScreen);
+                Navigator.pushNamed(context, AppRoutes.orderSuccess);
               },
-              title: "Checkout",
             ),
             const Gap(20),
           ],

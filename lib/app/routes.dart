@@ -1,3 +1,4 @@
+import 'package:clot/feature/Screens/orders/screens/order_success_screen.dart';
 import 'package:clot/feature/authentication/screens/about_user_screen.dart';
 import 'package:clot/feature/authentication/screens/forgot_password_screen.dart';
 import 'package:clot/feature/authentication/screens/sent_email_screen.dart';
@@ -11,6 +12,7 @@ import 'package:clot/feature/Screens/notification/screens/notification_screen.da
 import 'package:clot/feature/Screens/orders/screens/order_details_screen.dart';
 import 'package:clot/feature/Screens/orders/screens/order_screen.dart';
 import 'package:clot/feature/cart/screens/cart_screen.dart';
+import 'package:clot/feature/cart/screens/checkout_screen.dart';
 import 'package:clot/feature/payment/screens/add_card_screen.dart';
 import 'package:clot/feature/payment/screens/payement_screen.dart';
 import 'package:clot/feature/Screens/profile/screens/add_address_screen.dart';
@@ -45,6 +47,8 @@ class AppRoutes {
   static const String searchProduct = '/searchProduct';
   static const String searchDetail = '/searchDetail';
   static const String cartScreen = '/cartScreen';
+  static const String checkOutScreen = '/checkOutScreen';
+  static const String orderSuccess = '/orderSuccess';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -93,6 +97,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SearchDetailScreen());
       case cartScreen:
         return MaterialPageRoute(builder: (_) => const CartScreen());
+      case checkOutScreen:
+        return MaterialPageRoute(builder: (_) => const CheckOutScreen());
+      case orderSuccess:
+        return MaterialPageRoute(builder: (_) => const OrderSuccessScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

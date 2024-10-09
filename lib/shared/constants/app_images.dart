@@ -19,4 +19,5 @@ class AppImages {
   static const String image3 = "assets/images/image-3.png";
   static const String image4 = "assets/images/image-4.png";
   static const String image2 = "assets/images/image-2.png";
+  static const String orderImg = "assets/images/order-img.png";
 }
