@@ -1,5 +1,7 @@
 import 'package:clot/app/app_bar.dart';
 import 'package:clot/feature/search/widgets/search_card.dart';
+import 'package:clot/feature/search/widgets/select_color.dart';
+import 'package:clot/feature/search/widgets/select_size.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
 import 'package:clot/shared/widgets/app_button.dart';
@@ -90,7 +92,14 @@ class SearchDetailScreen extends ConsumerWidget {
                   ),
                   const Gap(10),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(
+                        isDismissible: false,
+                        barrierColor: AppColors.whiteColor.withOpacity(0.5),
+                        context: context,
+                        builder: (BuildContext index) => const SelectSize(),
+                      );
+                    },
                     child: const Icon(
                       Iconsax.arrow_down_14,
                       color: AppColors.blackColor,
@@ -110,7 +119,14 @@ class SearchDetailScreen extends ConsumerWidget {
                   ),
                   const Gap(10),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(
+                        isDismissible: false,
+                        barrierColor: AppColors.whiteColor.withOpacity(0.5),
+                        context: context,
+                        builder: (BuildContext index) => const SelectColor(),
+                      );
+                    },
                     child: const Icon(
                       Iconsax.arrow_down_14,
                       color: AppColors.blackColor,
