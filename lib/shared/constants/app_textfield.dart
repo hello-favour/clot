@@ -5,7 +5,7 @@ class AppTextField extends StatelessWidget {
   final String label;
   final TextEditingController controller;
   final bool obscure;
-  final Widget? icon;
+  final Widget? icon, suffixIcon;
   final TextInputType inputType;
   const AppTextField({
     super.key,
@@ -13,6 +13,7 @@ class AppTextField extends StatelessWidget {
     required this.controller,
     required this.inputType,
     this.obscure = false,
+    this.suffixIcon,
     this.icon,
   });
 
@@ -32,6 +33,7 @@ class AppTextField extends StatelessWidget {
               ),
           border: InputBorder.none,
           enabledBorder: InputBorder.none,
+          suffixIcon: suffixIcon,
           focusedBorder: InputBorder.none,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 10, horizontal: 20),

@@ -1,7 +1,7 @@
-import 'package:clot/feature/home/screens/home_screen.dart';
-import 'package:clot/feature/notification/screens/notification_screen.dart';
-import 'package:clot/feature/orders/screens/order_screen.dart';
-import 'package:clot/feature/profile/screens/profile_screen.dart';
+import 'package:clot/feature/Screens/home/screens/home_screen.dart';
+import 'package:clot/feature/Screens/notification/screens/notification_screen.dart';
+import 'package:clot/feature/Screens/orders/screens/order_screen.dart';
+import 'package:clot/feature/Screens/profile/screens/profile_screen.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';

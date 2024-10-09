@@ -1,6 +1,6 @@
 import 'package:clot/app/app_bar.dart';
 import 'package:clot/app/routes.dart';
-import 'package:clot/feature/profile/widgets/profile_card.dart';
+import 'package:clot/feature/Screens/profile/widgets/profile_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

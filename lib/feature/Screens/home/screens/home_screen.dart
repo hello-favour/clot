@@ -1,10 +1,10 @@
 import 'package:clot/app/app_bar.dart';
 import 'package:clot/app/routes.dart';
-import 'package:clot/feature/home/widgets/product_card.dart';
+import 'package:clot/feature/Screens/home/widgets/product_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
 import 'package:clot/shared/constants/app_textfield.dart';
-import 'package:clot/feature/home/widgets/categories_card.dart';
+import 'package:clot/feature/Screens/home/widgets/categories_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';

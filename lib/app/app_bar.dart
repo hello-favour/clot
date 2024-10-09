@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MyCustomAppBar extends StatelessWidget {
+  final Widget? title;
+  final bool showBackArrow;
+  final Widget? leadingIcon;
+  final List<Widget>? actions;
+  final VoidCallback? leadingOnPressed;
+  final Color? actionColor;
+
   const MyCustomAppBar({
     super.key,
     this.title,
@@ -10,13 +17,8 @@ class MyCustomAppBar extends StatelessWidget {
     this.leadingIcon,
     this.actions,
     this.leadingOnPressed,
+    this.actionColor,
   });
-
-  final Widget? title;
-  final bool showBackArrow;
-  final Widget? leadingIcon;
-  final List<Widget>? actions;
-  final VoidCallback? leadingOnPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -51,21 +53,21 @@ class MyCustomAppBar extends StatelessWidget {
                     ),
                   )
                 : const SizedBox.shrink(),
-
         // Title
         Expanded(
           child: Center(
             child: title ?? const SizedBox.shrink(),
           ),
         ),
-
         // Actions
         Row(
           children: actions?.map((action) {
                 return Container(
                   padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                    color: AppColors.primaryColor,
+                    color: actionColor != null
+                        ? AppColors.primaryColor
+                        : AppColors.greyColor,
                     borderRadius: const BorderRadius.all(Radius.circular(99)),
                     border: Border.all(color: AppColors.greyColor),
                   ),

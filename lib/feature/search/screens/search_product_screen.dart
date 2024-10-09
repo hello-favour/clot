@@ -1,14 +1,16 @@
 import 'package:clot/app/app_bar.dart';
+import 'package:clot/app/routes.dart';
 import 'package:clot/feature/Screens/home/widgets/product_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
+import 'package:clot/shared/constants/app_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
 
-class ProductCategoriesScreen extends ConsumerWidget {
-  const ProductCategoriesScreen({super.key});
+class SearchProductScreen extends ConsumerWidget {
+  const SearchProductScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,15 +24,24 @@ class ProductCategoriesScreen extends ConsumerWidget {
           children: [
             MyCustomAppBar(
               leadingIcon: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Icon(Iconsax.arrow_left)),
-            ),
-            const Gap(20),
-            Text(
-              "Hoodies (240)",
-              style: Theme.of(context).textTheme.headlineSmall,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(Iconsax.arrow_left),
+              ),
+              title: ClipRRect(
+                borderRadius: BorderRadius.circular(99),
+                child: SizedBox(
+                  width: size.width * 0.75,
+                  child: AppTextField(
+                    label: "Search",
+                    icon: const Icon(Iconsax.search_favorite),
+                    suffixIcon: const Icon(Iconsax.close_circle),
+                    controller: TextEditingController(),
+                    inputType: TextInputType.text,
+                  ),
+                ),
+              ),
             ),
             const Gap(20),
             Expanded(
@@ -51,7 +62,9 @@ class ProductCategoriesScreen extends ConsumerWidget {
                       imageUrl: AppImages.image3,
                       productName: "Fleece Skate Hoodie",
                       price: 110.00,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.searchDetail);
+                      },
                     ),
                   );
                 },

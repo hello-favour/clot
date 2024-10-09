@@ -31,17 +31,11 @@ class SignInScreen extends ConsumerWidget {
               label: "Email Address",
               controller: TextEditingController(),
             ),
-            const Gap(10),
-            AppTextField(
-              inputType: TextInputType.visiblePassword,
-              label: "Password",
-              controller: TextEditingController(),
-            ),
             const Gap(20),
             AppButton(
               title: "Continue",
               onTap: () {
-                Navigator.pushReplacementNamed(context, AppRoutes.signUp);
+                Navigator.pushNamed(context, AppRoutes.signInPs);
               },
             ),
             const Gap(20),

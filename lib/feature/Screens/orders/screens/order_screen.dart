@@ -1,5 +1,5 @@
 import 'package:clot/app/app_bar.dart';
-import 'package:clot/feature/orders/widgets/order_card.dart';
+import 'package:clot/feature/Screens/orders/widgets/order_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

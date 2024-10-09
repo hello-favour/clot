@@ -1,6 +1,5 @@
 import 'package:clot/app/routes.dart';
-import 'package:clot/feature/authentication/screens/about_user_screen.dart';
-import 'package:clot/shared/widgets/app_bottom_nav.dart';
+import 'package:clot/feature/search/screens/search_product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -31,7 +30,7 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const AppBottomNav(),
+      home: const SearchProductScreen(),
       initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRoutes.generateRoute,
     );

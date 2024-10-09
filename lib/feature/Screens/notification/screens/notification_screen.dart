@@ -1,5 +1,5 @@
 import 'package:clot/app/app_bar.dart';
-import 'package:clot/feature/notification/widgets/notification_card.dart';
+import 'package:clot/feature/Screens/notification/widgets/notification_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
 import 'package:clot/shared/widgets/app_button.dart';

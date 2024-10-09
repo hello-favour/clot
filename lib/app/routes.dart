@@ -4,17 +4,19 @@ import 'package:clot/feature/authentication/screens/sent_email_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_in_ps_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_in_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_up_screen.dart';
-import 'package:clot/feature/home/screens/home_screen.dart';
-import 'package:clot/feature/home/screens/sell_all_screen.dart';
-import 'package:clot/feature/home/screens/product_categories_screen.dart';
-import 'package:clot/feature/notification/screens/notification_screen.dart';
-import 'package:clot/feature/orders/screens/order_details_screen.dart';
-import 'package:clot/feature/orders/screens/order_screen.dart';
+import 'package:clot/feature/Screens/home/screens/home_screen.dart';
+import 'package:clot/feature/Screens/home/screens/sell_all_screen.dart';
+import 'package:clot/feature/Screens/home/screens/product_categories_screen.dart';
+import 'package:clot/feature/Screens/notification/screens/notification_screen.dart';
+import 'package:clot/feature/Screens/orders/screens/order_details_screen.dart';
+import 'package:clot/feature/Screens/orders/screens/order_screen.dart';
 import 'package:clot/feature/payment/screens/add_card_screen.dart';
 import 'package:clot/feature/payment/screens/payement_screen.dart';
-import 'package:clot/feature/profile/screens/add_address_screen.dart';
-import 'package:clot/feature/profile/screens/address_screen.dart';
-import 'package:clot/feature/profile/screens/profile_screen.dart';
+import 'package:clot/feature/Screens/profile/screens/add_address_screen.dart';
+import 'package:clot/feature/Screens/profile/screens/address_screen.dart';
+import 'package:clot/feature/Screens/profile/screens/profile_screen.dart';
+import 'package:clot/feature/search/screens/search_details_screen.dart';
+import 'package:clot/feature/search/screens/search_product_screen.dart';
 import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:clot/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +41,8 @@ class AppRoutes {
   static const String payment = '/paymentScreen';
   static const String addCard = '/addCard';
   static const String signInPs = '/signInPs';
+  static const String searchProduct = '/searchProduct';
+  static const String searchDetail = '/searchDetail';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -81,6 +85,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const PaymentScreen());
       case addCard:
         return MaterialPageRoute(builder: (_) => const AddCardScreen());
+      case searchProduct:
+        return MaterialPageRoute(builder: (_) => const SearchProductScreen());
+      case searchDetail:
+        return MaterialPageRoute(builder: (_) => const SearchDetailScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
