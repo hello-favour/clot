@@ -1,6 +1,7 @@
 import 'package:clot/feature/authentication/screens/about_user_screen.dart';
 import 'package:clot/feature/authentication/screens/forgot_password_screen.dart';
 import 'package:clot/feature/authentication/screens/sent_email_screen.dart';
+import 'package:clot/feature/authentication/screens/sign_in_ps_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_in_screen.dart';
 import 'package:clot/feature/authentication/screens/sign_up_screen.dart';
 import 'package:clot/feature/home/screens/home_screen.dart';
@@ -37,6 +38,7 @@ class AppRoutes {
   static const String addAddressScreen = '/addAddressScreen';
   static const String payment = '/paymentScreen';
   static const String addCard = '/addCard';
+  static const String signInPs = '/signInPs';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -44,6 +46,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case signIn:
         return MaterialPageRoute(builder: (_) => const SignInScreen());
+      case signInPs:
+        return MaterialPageRoute(builder: (_) => const SignInPsScreen());
       case signUp:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case forgotPassword:
