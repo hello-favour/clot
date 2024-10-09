@@ -31,7 +31,13 @@ class AgeRangeCard extends StatelessWidget {
                 ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext index) {
+                    return const AgeRangeWidget();
+                  });
+            },
             icon: const Icon(
               Iconsax.arrow_down_14,
               color: AppColors.blackColor,
@@ -39,6 +45,27 @@ class AgeRangeCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+List age = [
+  "18-24",
+  "45-54",
+  "35-44",
+  "+65",
+  "55-64",
+];
+
+class AgeRangeWidget extends StatelessWidget {
+  const AgeRangeWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: AppColors.whiteColor,
     );
   }
 }

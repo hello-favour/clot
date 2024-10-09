@@ -1,7 +1,5 @@
 import 'package:clot/app/routes.dart';
-import 'package:clot/feature/authentication/screens/sign_in_ps_screen.dart';
-import 'package:clot/feature/payment/screens/add_card_screen.dart';
-import 'package:clot/feature/payment/screens/payement_screen.dart';
+import 'package:clot/feature/authentication/screens/about_user_screen.dart';
 import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -33,7 +31,7 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const SignInPsScreen(),
+      home: const AppBottomNav(),
       initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRoutes.generateRoute,
     );
