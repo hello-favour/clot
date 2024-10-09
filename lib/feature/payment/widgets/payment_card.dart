@@ -2,14 +2,14 @@ import 'package:clot/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class ProfileCard extends StatelessWidget {
+class PaymentCard extends StatelessWidget {
   final VoidCallback? onTap;
-  final String title;
+  final Widget title;
   final double? height;
   final Widget? subTitle, text;
   final bool check;
 
-  const ProfileCard({
+  const PaymentCard({
     super.key,
     this.onTap,
     required this.title,
@@ -38,11 +38,7 @@ class ProfileCard extends StatelessWidget {
             alignment: Alignment.center,
             child: ListTile(
               contentPadding: EdgeInsets.zero,
-              title: Text(
-                title,
-                style: Theme.of(context).textTheme.bodyLarge,
-                overflow: TextOverflow.ellipsis,
-              ),
+              title: title,
               subtitle: subTitle,
               trailing: check ? const Icon(Iconsax.arrow_right_24) : text,
             ),

@@ -10,6 +10,7 @@ class AppImages {
 
   //SOCIAL ICON
   static const String googleIcon = "assets/icons/google.png";
+  static const String masterCard = "assets/icons/master-card.png";
 
   //IMAGES
   static const String image1 = "assets/images/image-1.png";

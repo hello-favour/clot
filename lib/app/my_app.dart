@@ -1,4 +1,6 @@
 import 'package:clot/app/routes.dart';
+import 'package:clot/feature/payment/screens/add_card_screen.dart';
+import 'package:clot/feature/payment/screens/payement_screen.dart';
 import 'package:clot/shared/widgets/app_bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -30,7 +32,7 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const AppBottomNav(),
+      home: const AddCardScreen(),
       initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRoutes.generateRoute,
     );

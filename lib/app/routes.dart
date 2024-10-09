@@ -9,6 +9,8 @@ import 'package:clot/feature/home/screens/product_categories_screen.dart';
 import 'package:clot/feature/notification/screens/notification_screen.dart';
 import 'package:clot/feature/orders/screens/order_details_screen.dart';
 import 'package:clot/feature/orders/screens/order_screen.dart';
+import 'package:clot/feature/payment/screens/add_card_screen.dart';
+import 'package:clot/feature/payment/screens/payement_screen.dart';
 import 'package:clot/feature/profile/screens/add_address_screen.dart';
 import 'package:clot/feature/profile/screens/address_screen.dart';
 import 'package:clot/feature/profile/screens/profile_screen.dart';
@@ -33,6 +35,8 @@ class AppRoutes {
   static const String profileScreen = '/profileScreen';
   static const String addressScreen = '/addressScreen';
   static const String addAddressScreen = '/addAddressScreen';
+  static const String payment = '/paymentScreen';
+  static const String addCard = '/addCard';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -69,6 +73,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AddressScreen());
       case addAddressScreen:
         return MaterialPageRoute(builder: (_) => const AddAddressScreen());
+      case payment:
+        return MaterialPageRoute(builder: (_) => const PaymentScreen());
+      case addCard:
+        return MaterialPageRoute(builder: (_) => const AddCardScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
