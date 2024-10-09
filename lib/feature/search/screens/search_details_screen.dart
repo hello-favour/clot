@@ -1,4 +1,5 @@
 import 'package:clot/app/app_bar.dart';
+import 'package:clot/app/routes.dart';
 import 'package:clot/feature/search/widgets/search_card.dart';
 import 'package:clot/feature/search/widgets/select_color.dart';
 import 'package:clot/feature/search/widgets/select_size.dart';
@@ -200,7 +201,9 @@ class SearchDetailScreen extends ConsumerWidget {
                   ),
                 ],
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.cartScreen);
+              },
             ),
           ],
         ),

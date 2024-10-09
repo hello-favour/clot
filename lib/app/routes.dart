@@ -10,6 +10,7 @@ import 'package:clot/feature/Screens/home/screens/product_categories_screen.dart
 import 'package:clot/feature/Screens/notification/screens/notification_screen.dart';
 import 'package:clot/feature/Screens/orders/screens/order_details_screen.dart';
 import 'package:clot/feature/Screens/orders/screens/order_screen.dart';
+import 'package:clot/feature/cart/screens/cart_screen.dart';
 import 'package:clot/feature/payment/screens/add_card_screen.dart';
 import 'package:clot/feature/payment/screens/payement_screen.dart';
 import 'package:clot/feature/Screens/profile/screens/add_address_screen.dart';
@@ -43,6 +44,7 @@ class AppRoutes {
   static const String signInPs = '/signInPs';
   static const String searchProduct = '/searchProduct';
   static const String searchDetail = '/searchDetail';
+  static const String cartScreen = '/cartScreen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -89,6 +91,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SearchProductScreen());
       case searchDetail:
         return MaterialPageRoute(builder: (_) => const SearchDetailScreen());
+      case cartScreen:
+        return MaterialPageRoute(builder: (_) => const CartScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
