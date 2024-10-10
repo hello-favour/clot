@@ -1,4 +1,5 @@
 import 'package:clot/app/app_bar.dart';
+import 'package:clot/app/routes.dart';
 import 'package:clot/feature/payment/widgets/payment_card.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
@@ -23,7 +24,8 @@ class PaymentScreen extends ConsumerWidget {
             MyCustomAppBar(
               leadingIcon: GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacementNamed(
+                      context, AppRoutes.appBottomNav);
                 },
                 child: const Icon(Iconsax.arrow_left),
               ),

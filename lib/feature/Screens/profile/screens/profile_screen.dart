@@ -78,12 +78,16 @@ class ProfileScreen extends ConsumerWidget {
             ),
             const Gap(5),
             ProfileCard(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.wishList);
+              },
               title: "Wishlist",
             ),
             const Gap(5),
             ProfileCard(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.addCard);
+              },
               title: "Payment",
             ),
             const Gap(5),

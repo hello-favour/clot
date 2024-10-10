@@ -21,8 +21,11 @@ class ForgotPasswordScereen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const MyCustomAppBar(
-              leadingIcon: Icon(Iconsax.arrow_left),
+            MyCustomAppBar(
+              leadingIcon: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: const Icon(Iconsax.arrow_left),
+              ),
             ),
             const Gap(20),
             Text(
@@ -39,7 +42,7 @@ class ForgotPasswordScereen extends ConsumerWidget {
             AppButton(
               title: "Continue",
               onTap: () {
-                Navigator.pushReplacementNamed(context, AppRoutes.aboutUser);
+                Navigator.pushReplacementNamed(context, AppRoutes.sentEmail);
               },
             ),
           ],

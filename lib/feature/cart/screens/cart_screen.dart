@@ -79,7 +79,7 @@ class CartScreen extends ConsumerWidget {
             Gap(size.height * 0.08),
             AppButton(
               onTap: () {
-                Navigator.pushNamed(context, AppRoutes.checkOutScreen);
+                Navigator.pushNamed(context, AppRoutes.addAddress);
               },
               title: "Checkout",
             ),

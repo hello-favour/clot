@@ -1,4 +1,5 @@
 import 'package:clot/feature/Screens/orders/screens/order_success_screen.dart';
+import 'package:clot/feature/Screens/profile/screens/wishlist_screen.dart';
 import 'package:clot/feature/authentication/screens/about_user_screen.dart';
 import 'package:clot/feature/authentication/screens/forgot_password_screen.dart';
 import 'package:clot/feature/authentication/screens/sent_email_screen.dart';
@@ -49,6 +50,8 @@ class AppRoutes {
   static const String cartScreen = '/cartScreen';
   static const String checkOutScreen = '/checkOutScreen';
   static const String orderSuccess = '/orderSuccess';
+  static const String addAddress = '/addAddress';
+  static const String wishList = '/wishList';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -101,6 +104,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const CheckOutScreen());
       case orderSuccess:
         return MaterialPageRoute(builder: (_) => const OrderSuccessScreen());
+      case addAddress:
+        return MaterialPageRoute(builder: (_) => const AddAddressScreen());
+      case wishList:
+        return MaterialPageRoute(builder: (_) => const WishListScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

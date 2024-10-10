@@ -82,7 +82,7 @@ class AddCardScreen extends ConsumerWidget {
                 onTap: () {
                   Navigator.pushReplacementNamed(
                     context,
-                    AppRoutes.appBottomNav,
+                    AppRoutes.payment,
                   );
                 },
               ),

@@ -1,3 +1,4 @@
+import 'package:clot/app/routes.dart';
 import 'package:clot/shared/constants/app_colors.dart';
 import 'package:clot/shared/constants/app_images.dart';
 import 'package:clot/shared/widgets/app_button.dart';
@@ -36,7 +37,9 @@ class SentEmailScreen extends ConsumerWidget {
               width: size.height * 0.20,
               child: AppButton(
                 title: "Return to Login",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.appBottomNav);
+                },
               ),
             ),
           ],
