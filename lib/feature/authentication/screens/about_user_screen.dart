@@ -76,10 +76,7 @@ class AboutUserScreen extends ConsumerWidget {
               AppButton(
                 title: "Finish",
                 onTap: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    AppRoutes.appBottomNav,
-                  );
+                  Navigator.pushNamed(context, AppRoutes.signIn);
                 },
               ),
             ],

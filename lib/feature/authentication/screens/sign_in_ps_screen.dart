@@ -34,7 +34,7 @@ class SignInPsScreen extends ConsumerWidget {
             AppButton(
               title: "Continue",
               onTap: () {
-                Navigator.pushReplacementNamed(context, AppRoutes.signUp);
+                Navigator.pushNamed(context, AppRoutes.appBottomNav);
               },
             ),
             const Gap(20),

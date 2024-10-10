@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/fonts/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -82,7 +83,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Circular Std
+    - family: CircularStd
       fonts:
         - asset: assets/fonts/circular-std-medium.ttf
   #       - asset: fonts/Schyler-Italic.ttf
